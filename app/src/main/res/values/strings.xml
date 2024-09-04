@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">activity_Information</string>
+
+    <string name="register">Register</string>
+    <string name="email_address">Email Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="button_register">Sign In</string>
+
+    <string name="already_Account">Already have an Account? Sign in</string>
+    <string name="program_name">Focus</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="welcomeBack_text">Welcome\nBack!</string>
+
+    <string name="LogIn">Log In</string>
+    <string name="signIn">Sign In</string>
+
+    <string name="signIn_now">Sign In now</string>
+
+    <string name="logo_white">logo_focus</string>
+    <string name="half_globe">half_globe</string>
+
+</resources>

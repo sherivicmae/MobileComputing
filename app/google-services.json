@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "776321332231",
+    "project_id": "focusapp-892b3",
+    "storage_bucket": "focusapp-892b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776321332231:android:1a695acfaa6928e77d26a2",
+        "android_client_info": {
+          "package_name": "com.example.activity_information"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS4spe7w_Cjf_cECGWnS-_WuiDEXE1l7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
