@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">activity2_information</string>
+
+
+    <string name="email_address">Email Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="program">Program</string>
+    <string name="year_level">Year-Level</string>
+    <string name="students_information">Student\'s Information</string>
+    <string name="button_done">Done</string>
+
+    <string name="full_name_hint">Full Name</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="program_hint">Program</string>
+    <string name="year_level_hint">Year-Level</string>
+</resources>
