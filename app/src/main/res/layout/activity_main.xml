@@ -5,29 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/my_primary"
+    android:background="@drawable/main_bg"
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/text_main"
-        android:layout_width="142dp"
-        android:layout_height="44dp"
-        android:text="@string/welcome_text"
-        android:textColor="@color/white"
-        android:ems="20"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/log_out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="232dp"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:text="Log Out"
         android:textColor="@color/my_primary"
@@ -35,6 +21,142 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_main"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintTop_toBottomOf="@+id/interestsTextView" />
+
+    <TextView
+        android:id="@+id/heyThere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan_extrabold"
+        android:shadowColor="@color/my_primary"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="@string/hey_there"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/my_primary"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heyThere" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView" />
+
+    <TextView
+        android:id="@+id/phoneNumTextView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumTextView" />
+
+    <TextView
+        android:id="@+id/birthdateTextView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTextView" />
+
+    <TextView
+        android:id="@+id/provinceTextView"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthdateTextView" />
+
+    <TextView
+        android:id="@+id/interestsTextView"
+        android:layout_width="277dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/league_spartan_bold"
+        android:padding="8dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/my_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/provinceTextView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

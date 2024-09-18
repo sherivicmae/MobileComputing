@@ -6,19 +6,127 @@
     <string name="full_name">Full Name</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="button_register">Sign In</string>
 
-    <string name="already_Account">Already have an Account? Sign in</string>
+    <string name="already_Account">Already have an Account? <b>Sign in</b></string>
     <string name="program_name">Focus</string>
     <string name="welcome_text">Welcome!</string>
-    <string name="welcomeBack_text">Welcome\nBack!</string>
+    <string name="welcomeBack_text">Welcome Back!</string>
 
     <string name="LogIn">Log In</string>
     <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
 
     <string name="signIn_now">Sign In now</string>
 
     <string name="logo_white">logo_focus</string>
     <string name="half_globe">half_globe</string>
+    <string name="createAcc">Create your new account</string>
+    <string name="logPrev_acc">Login to your account</string>
+    <string name="connect_with_us">Connect with Us</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? <b>Sign Up</b></string>
+    <string name="hey_there">Hey there!</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="country">Country</string>
+    <string name="select_your_gender">Select your Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="others_gender">Others</string>
+    <string name="mm_dd_yy">mm-dd-yy</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="next">Next</string>
+    <string name="gender">Gender</string>
+    <string name="state">State</string>
+    <string name="interests">Interests</string>
+    <string name="province">Province</string>
+
+    <string-array name="philippines_provinces">
+        <item>Abra</item>
+        <item>Agusan del Norte</item>
+        <item>Agusan del Sur</item>
+        <item>Aklan</item>
+        <item>Albay</item>
+        <item>Antique</item>
+        <item>Apayao</item>
+        <item>Aurora</item>
+        <item>Basilan</item>
+        <item>Bataan</item>
+        <item>Batanes</item>
+        <item>Batangas</item>
+        <item>Beaunan</item>
+        <item>Biliran</item>
+        <item>Bohol</item>
+        <item>Bukidnon</item>
+        <item>Bukidnon</item>
+        <item>Bulacan</item>
+        <item>Cagayan</item>
+        <item>Camarines Norte</item>
+        <item>Camarines Sur</item>
+        <item>Camiguin</item>
+        <item>Capiz</item>
+        <item>Cavite</item>
+        <item>Cebu</item>
+        <item>Compostela Valley</item>
+        <item>Cotabato</item>
+        <item>Davao de Oro</item>
+        <item>Davao del Norte</item>
+        <item>Davao del Sur</item>
+        <item>Davao Occidental</item>
+        <item>Davao Oriental</item>
+        <item>Dinagat Islands</item>
+        <item>Eastern Samar</item>
+        <item>Guimaras</item>
+        <item>Ifugao</item>
+        <item>Ilocos Norte</item>
+        <item>Ilocos Sur</item>
+        <item>Iloilo</item>
+        <item>Isabela</item>
+        <item>Kalinga</item>
+        <item>Kalayaan</item>
+        <item>La Union</item>
+        <item>Laguna</item>
+        <item>Lanao del Norte</item>
+        <item>Lanao del Sur</item>
+        <item>La Union</item>
+        <item>Las Piñas</item>
+        <item>Layag-Layag</item>
+        <item>Marinduque</item>
+        <item>Masbate</item>
+        <item>Metro Manila</item>
+        <item>Misamis Occidental</item>
+        <item>Misamis Oriental</item>
+        <item>Mountain Province</item>
+        <item>Negros Occidental</item>
+        <item>Negros Oriental</item>
+        <item>North Cotabato</item>
+        <item>Northern Samar</item>
+        <item>Nueva Ecija</item>
+        <item>Nueva Vizcaya</item>
+        <item>Occidental Mindoro</item>
+        <item>Oriental Mindoro</item>
+        <item>Palawan</item>
+        <item>Pampanga</item>
+        <item>Pangasinan</item>
+        <item>Rizal</item>
+        <item>Romblon</item>
+        <item>Roxas</item>
+        <item>Samar</item>
+        <item>San Juan</item>
+        <item>Saranggani</item>
+        <item>Siquijor</item>
+        <item>Sorsogon</item>
+        <item>South Cotabato</item>
+        <item>Southern Leyte</item>
+        <item>Sultan Kudarat</item>
+        <item>Sulu</item>
+        <item>Tarlac</item>
+        <item>Taguig</item>
+        <item>Tambon</item>
+        <item>Tanauan</item>
+        <item>Western Samar</item>
+        <item>Zambales</item>
+        <item>Zamboanga del Norte</item>
+        <item>Zamboanga del Sur</item>
+        <item>Zamboanga Sibugay</item>
+    </string-array>
 
 </resources>

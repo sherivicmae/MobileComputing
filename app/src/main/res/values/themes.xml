@@ -18,10 +18,10 @@
 
     <style name="custom_card_view" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">48dp</item>
-        <item name="cornerSizeTopLeft">48dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopRight">30dp</item>
+        <item name="cornerSizeTopLeft">30dp</item>
+        <item name="cornerSizeBottomRight">30dp</item>
+        <item name="cornerSizeBottomLeft">30dp</item>
 
     </style>
 
