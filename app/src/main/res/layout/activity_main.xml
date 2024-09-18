@@ -64,7 +64,7 @@
 
     <TextView
         android:id="@+id/emailTextView"
-        android:layout_width="280dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input_bg"
@@ -81,7 +81,7 @@
 
     <TextView
         android:id="@+id/phoneNumTextView"
-        android:layout_width="280dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_bg"
@@ -97,7 +97,7 @@
 
     <TextView
         android:id="@+id/genderTextView"
-        android:layout_width="280dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_bg"
@@ -113,7 +113,7 @@
 
     <TextView
         android:id="@+id/birthdateTextView"
-        android:layout_width="280dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_bg"
@@ -129,7 +129,7 @@
 
     <TextView
         android:id="@+id/provinceTextView"
-        android:layout_width="280dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_bg"
@@ -145,7 +145,7 @@
 
     <TextView
         android:id="@+id/interestsTextView"
-        android:layout_width="277dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/input_bg"

@@ -35,6 +35,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.concurrent.CompletableFuture;
 
 public class Register2 extends AppCompatActivity {
 
@@ -89,7 +90,7 @@ public class Register2 extends AppCompatActivity {
         String password = getIntent().getStringExtra("password");
         String phoneNum = getIntent().getStringExtra("phoneNum");
 
-        // Initialize your views here (outside of the insets listener)
+        // Initialize views
         rdb_Male = findViewById(R.id.rdbMale);
         rdb_Female = findViewById(R.id.rdbFemale);
         rdb_Others = findViewById(R.id.rdbOthers);
@@ -97,12 +98,12 @@ public class Register2 extends AppCompatActivity {
         editbirthdate = findViewById(R.id.birthdate);
         btnBirthday = findViewById(R.id.btnBirthdate);
         provinceSpinner = findViewById(R.id.province_spinner);
-        textView=findViewById(R.id.already_account);
+        textView = findViewById(R.id.already_account);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Login.class);
+                Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
                 finish();
             }
@@ -175,56 +176,77 @@ public class Register2 extends AppCompatActivity {
                 }
 
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Registration success
-                                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                                    if (firebaseUser != null) {
-                                        String userId = firebaseUser.getUid();
-                                        User user = new User(userId, userName, email, phoneNum, selectedGender, birthdate, province, interests);
-                                        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users");
-
-                                        // Save user details
-                                        usersRef.child(userId).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    // Show success message
-                                                    Toast.makeText(Register2.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
-
-                                                } else {
-                                                    // Handle failure of saving user data in Realtime Database
-                                                    Toast.makeText(Register2.this, "Failed to save user data to database.", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-                                        });
-                                    }
-                                } else {
-                                    // Handle authentication failure
-                                    String errorMsg = "Authentication failed.";
-                                    if (task.getException() != null) {
-                                        errorMsg += " Reason: " + task.getException().getMessage();
-                                    }
-
-                                    // Log the reason for authentication failure
-                                    Log.e("Register2", errorMsg);
-                                    Toast.makeText(Register2.this, errorMsg, Toast.LENGTH_LONG).show();
-                                }
-                            }
+                saveData(userName, email, password, phoneNum, selectedGender, birthdate, province, interests)
+                        .whenComplete((result, exception) -> {
+                            hideLoadingDialog();
+                            openLogInPage();
                         });
-
-
             }
+
+
         });
 
     }
 
-    private void saveData(){
+    private void openLogInPage() {
 
+        Intent openLogIn = new Intent(Register2.this, Login.class);
+        startActivity(openLogIn);
+        finish();
     }
+
+
+    private CompletableFuture<Void> saveData(String userName, String email, String password, String phoneNum, String selectedGender, String birthdate, String province, String interests) {
+
+        CompletableFuture<Void> future = new CompletableFuture<>();
+
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Registration success
+                            FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                            if (firebaseUser != null) {
+                                String userId = firebaseUser.getUid();
+                                User user = new User(userId, userName, email, phoneNum, selectedGender, birthdate, province, interests);
+                                DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users");
+
+                                // Save user details
+                                usersRef.child(userId).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            // Show success message
+                                            Toast.makeText(Register2.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                                            future.complete(null);
+
+                                        } else {
+                                            // Handle failure of saving user data in Realtime Database
+                                            Toast.makeText(Register2.this, "Failed to save user data to database.", Toast.LENGTH_SHORT).show();
+                                            future.completeExceptionally(task.getException());
+                                        }
+                                    }
+                                });
+                            }
+                        } else {
+                            // Handle authentication failure
+                            String errorMsg = "Authentication failed.";
+                            if (task.getException() != null) {
+                                errorMsg += " Reason: " + task.getException().getMessage();
+                            }
+
+                            // Log the reason for authentication failure
+                            Log.e("Register2", errorMsg);
+                            Toast.makeText(Register2.this, errorMsg, Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+        return future;
+    }
+    //nagredirect sa log in
+    //wala
 
 
     private void showLoadingDialog(){
