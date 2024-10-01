@@ -34,6 +34,7 @@ public class Login extends AppCompatActivity {
     TextView textView;
     SharedPreferences logInPreference;
     SharedPreferences.Editor logInPrefEditor;
+    TextView forgetPass;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -64,6 +65,7 @@ public class Login extends AppCompatActivity {
         editTextPassword = findViewById(R.id.logIn_password);
         button_logIn = findViewById(R.id.button_logIn);
         textView=findViewById(R.id.signIn_now);
+        forgetPass = findViewById(R.id.forget_pass);
 
         logInPreference= getSharedPreferences("LogInPrefs", MODE_PRIVATE);
         logInPrefEditor=logInPreference.edit();
@@ -76,6 +78,13 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),Register.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        forgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv_forgot_pass_OnClickEvent();
             }
         });
 
@@ -128,7 +137,6 @@ public class Login extends AppCompatActivity {
 
                                 } else {
                                     handleFailedLogInAttempt();
-                                    Toast.makeText(Login.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -138,6 +146,28 @@ public class Login extends AppCompatActivity {
 
 
     }
+
+    private void tv_forgot_pass_OnClickEvent() {
+        final String email = editTextEmail.getText().toString().trim();
+
+        if(!validateEmailAddress(editTextEmail)) {
+            Toast.makeText(this, "Please enter your valid email.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mAuth.sendPasswordResetEmail(email)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Login.this, "Password reset sent to: " + email, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+    }
+
+
     private void handleFailedLogInAttempt(){
         //get the number of previous failed attempts
         int failedAttempts = logInPreference.getInt(Constants.LogInAttemptsCount, 0);

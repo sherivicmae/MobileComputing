@@ -38,6 +38,11 @@
     <string name="state">State</string>
     <string name="interests">Interests</string>
     <string name="province">Province</string>
+    <string name="log_out">Log Out</string>
+    <string name="loading">Loading...</string>
+    <string name="hello_world">Hello, World!</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="forgot_password">Forgot Password</string>
 
     <string-array name="philippines_provinces">
         <item>Abra</item>
@@ -128,9 +133,6 @@
         <item>Zamboanga del Sur</item>
         <item>Zamboanga Sibugay</item>
     </string-array>
-
-
-
 
 
 </resources>

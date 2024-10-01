@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private DatabaseReference usersRef;
-    private Button button;
+    private Button button, calcu;
     private TextView userNameTextView, emailTextView, phoneNumTextView, genderTextView, birthdateTextView, provinceTextView, interestsTextView;
     private FirebaseUser user;
 
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         provinceTextView = findViewById(R.id.provinceTextView);
         interestsTextView = findViewById(R.id.interestsTextView);
         button = findViewById(R.id.log_out);
+        calcu = findViewById(R.id.calcu);
 
 
 
@@ -98,6 +99,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
+            }
+        });
+
+        //calcu
+        calcu.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intentCalcu = new Intent(getApplicationContext(), Calculator.class);
+                intentCalcu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentCalcu);
                 finish();
             }
         });

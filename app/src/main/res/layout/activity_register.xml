@@ -34,6 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:fontFamily="@font/lexend_light"
                 android:labelFor="@+id/inputPassword"
                 android:text="@string/password"
@@ -41,9 +42,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/inputPassword"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.024"
+                app:layout_constraintHorizontal_bias="0.004"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputUsername" />
+                app:layout_constraintTop_toBottomOf="@+id/inputUsername"
+                app:layout_constraintVertical_bias="0.909" />
 
             <EditText
                 android:id="@+id/inputPassword"
@@ -84,6 +86,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="188dp"
                 android:fontFamily="@font/lexend_light"
                 android:labelFor="@+id/inputEmail"
@@ -91,7 +94,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.027"
+                app:layout_constraintHorizontal_bias="0.004"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_Info" />
 
@@ -119,6 +122,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="264dp"
                 android:fontFamily="@font/lexend_light"
                 android:labelFor="@+id/inputPhoneNum"
@@ -180,6 +184,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/lexend_light"
                 android:labelFor="@+id/inputUsername"

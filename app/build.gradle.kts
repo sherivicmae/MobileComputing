@@ -44,4 +44,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.faendir.rhino:rhino-android:1.6.0")
+
+
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
+
+
+
 }

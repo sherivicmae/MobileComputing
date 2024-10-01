@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Activity_Information"
         tools:targetApi="31">
         <activity
+            android:name=".Calculator"
+            android:exported="false" />
+        <activity
+            android:name=".HelloWorld"
+            android:exported="false" />
+        <activity
             android:name=".Register2"
             android:exported="false" />
         <activity
@@ -22,8 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,7 +37,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

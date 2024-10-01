@@ -8,4 +8,10 @@
     <color name="my_secondaryBlue">#8B8FC0</color>
     <color name="my_accent">#f3bd68</color>
 
+    //for calculator
+    <color name="numbers_color">#d1e3ff</color>
+    <color name="arithmetic_operations">#6f96d1</color>
+    <color name="darker_blue">#344ead</color>
+    <color name="white_calcu">#fff9ef</color>
+
 </resources>
