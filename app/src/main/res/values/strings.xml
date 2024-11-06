@@ -44,6 +44,107 @@
     <string name="forget_password">Forget Password?</string>
     <string name="forgot_password">Forgot Password</string>
 
+    <string name="user_profile">User Profile</string>
+    <string name="hello">Hello World</string>
+    <string name="calculator">Calculator</string>
+    <string name="signout">Sign Out</string>
+    <string name="user_information">User Information</string>
+    <string name="back">Back</string>
+    <string name="ac">AC</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_add">+</string>
+    <string name="_period">.</string>
+    <string name="_equals">=</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_minus">-</string>
+    <string name="del">Del</string>
+    <string name="_percent">%</string>
+    <string name="_divide">/</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="backhome">backHome</string>
+    <string name="_multiply">x</string>
+    <string name="myName">Sherivic Dimagculang</string>
+    <string name="close_parenthesis">)</string>
+    <string name="open_parenthesis">(</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="study">Study</string>
+
+    <string name="intro">Infrared (IR) communication is a wireless technology that uses
+        infrared light waves to transmit data over short distances. Operating on a
+        spectrum just below visible light, IR communication is invisible to the human
+        eye but can carry data through modulated light pulses. It has been widely
+        used in consumer electronics, particularly in remote controls for televisions,
+        audio systems, air conditioners, and other household devices.</string>
+
+    <string name="IR_fundamentals">The basic components of an IR communication system include:\n\n
+    <b>•IR Transmitter</b>: The transmitter is responsible for converting electronic signals into infrared light pulses. It typically consists of an infrared LED and a driver circuit that modulates the LED\'s intensity to encode the data.\n\n
+     <b>•IR Channel </b>: The IR channel is the medium through which the infrared light travels, which is typically free space.\n\n
+     <b>•IR Receiver </b>: The receiver is responsible for detecting the infrared light pulses and converting them back into electronic signals. It typically includes a photodetector, such as a photodiode or phototransistor, and supporting circuitry for signal amplification and demodulation.\n\n
+     <b>•Modulation and Demodulation</b>: Modulation is the process of encoding the data onto the infrared light carrier, while demodulation is the process of decoding the data from the received infrared signal.\n\n
+    The most common modulation techniques used in IR communication are:\n
+    - On-Off Keying (OOK): The simplest form of modulation, where the LED is turned on and off to represent binary data.\n
+    - Pulse-Position Modulation (PPM): The data is encoded by the position of the pulse within a fixed time slot.\n
+    - Pulse-Width Modulation (PWM): The data is encoded by the width of the pulse within a fixed time slot.
+</string>
+    <string name="IRTransmitter"> <b>IR Transmitter</b>: The transmitter is responsible for converting electronic signals into infrared light pulses. It typically consists of an infrared LED and a driver circuit that modulates the LED\'s intensity to encode the data.</string>
+    <string name="IRChannel"><b>IR Channel</b>: The IR channel is the medium through which the infrared light travels, which is typically free space.</string>
+    <string name="IRReceiver"><b>IR Receiver</b>: The receiver is responsible for detecting the infrared light pulses and converting them back into electronic signals. It typically includes a photodetector, such as a photodiode or phototransistor, and supporting circuitry for signal amplification and demodulation.</string>
+    <string name="IRModulation"><b>Modulation and Demodulation</b>: Modulation is the process of encoding the data onto the infrared light carrier, while demodulation is the process of decoding the data from the received infrared signal.</string>
+    <string name="IRWorks"><b>1. Transmission Process</b>\n\n The transmission process in infrared communication begins with digital data in the form of binary 1s and 0s that need to be transmitted. This digital information undergoes conversion into electrical signals through specialized circuitry.
+        Once converted, these electrical signals are then modulated using various techniques, with pulse width modulation being one of the most common methods. This modulation helps in making the signal more suitable for transmission and less susceptible to interference.
+        The final stage of transmission involves an infrared LED, which acts as the primary transmission component. This LED converts the modulated electrical signals into pulses of infrared light,
+        effectively transforming the original digital data into a form that can be transmitted through space.\n\n
+        <b>2. Propagation</b>\n\n During the propagation phase, the infrared light signals travel through the transmission medium, which is typically air, although other mediums can also be used. These light signals can travel in two primary ways: either directly in a straight line between the transmitter and receiver (line of sight), or by bouncing off various surfaces such as walls and ceilings (diffuse transmission). The effective range and quality of this propagation
+        depend on several critical factors. The power output of the transmitter plays a crucial role in determining how far the signal can travel.
+        Environmental conditions, such as ambient light and atmospheric interference, can significantly affect signal quality. The sensitivity of the receiver determines how well weak signals can be detected,
+        and physical obstacles in the transmission path can block or degrade the signal, affecting overall communication quality.\n\n
+        <b>3. Reception Process</b>\n\n The reception process begins with a photodetector, typically either an IR photodiode or phototransistor,
+        which is specifically designed to detect incoming infrared light signals. When these light signals reach the photodetector,
+        it performs the crucial task of converting them back into electrical signals, essentially reversing the initial transmission process.
+        However, these initial electrical signals are usually very weak and require amplification through specialized circuits to bring them to usable levels.
+        Once amplified, the signals undergo demodulation, a process that extracts the original digital information from the modulated carrier signal.
+        Finally, the receiving device processes this recovered digital data, interpreting it according to the specific communication protocol being used.
+        This complete reception process ensures that the original digital information is accurately recovered and can be used by the receiving device
+        as intended.</string>
+
+    <string name="IRAdvantagesandLimitation"><b>Advantages of Infrared Communication:</b>\n\n •Low cost and simple implementation\n •Immunity to
+        electromagnetic interference\n •Highly directional, providing secure point-to-point communication\n •No licensing requirements for use\n\n
+        <b>Limitations of Infrared Communication:</b>\n\n  •Line-of-sight requirement, limiting range and obstructing obstacles\n •Low data rates
+        compared to other wireless technologies\n •Interference from ambient light sources\n •Limited penetration through certain materials</string>
+
+    <string name="IRApplications">Infrared communication has a wide range of applications due to its ability to transmit data wirelessly over short distances. Some of its primary applications are:  \n\n
+        <b>1. Remote Controls:</b> Infrared remote controls are ubiquitous in consumer electronics, such as TVs, air conditioners, and home entertainment systems.\n
+        <b>2. Wireless Data Transfer:</b> IR communication is used for short-range, line-of-sight data transfer between devices, such as file sharing between smartphones, laptops, and printers.\n
+        <b>3. Industrial Automation:</b> IR communication is used in industrial environments for wireless control and monitoring of equipment, as well as for data transmission between devices.\n
+        <b>4. Optical Communication:</b> Infrared light is used in fiber-optic communication systems for long-distance data transmission.\n
+        <b>5. Medical Applications:</b> IR communication is used in medical devices, such as wireless patient monitoring systems and remote control of medical equipment.\n
+        <b>6. Security and Access Control:</b> IR communication is used in security systems for remote control and access management.</string>
+
+    <string name="IRProtocols">Infrared (IR) communication is widely used for short-range wireless communication, particularly in remote controls, data exchange, and point-to-point communication. Several protocols and standards ensure that devices can effectively communicate over IR, each defining specific communication parameters like data rates, modulation schemes, and frame structures. \n\n
+        <b>IrDA (Infrared Data Association):</b> IrDA is a widely recognized standard for short-range, point-to-point IR communication.It defines specifications across the physical, link, and application layers, ensuring smooth data exchange between devices.This is often used in mobile phones, laptops, and printers for data transfer in close proximity.\n\n
+        <b>IRMP (Infrared Multi-Protocol):</b> IRMP is an open-source protocol supporting a variety of IR remote control codes.It is particularly valuable in applications requiring support for multiple remote control types across different brands and devices.\n\n
+        <b>SIRCS (Sony Infrared Remote Control System):</b> SIRCS is a proprietary protocol developed by Sony, tailored for Sony\'s range of remote control devices. It is known for its simple and reliable design, it allows Sony devices to communicate seamlessly over IR.\n\n
+        <b>NEC (Nippon Electric Company) Protocol:</b> The NEC protocol is one of the most commonly used standards in consumer electronics for IR remote controls. Its popularity stems from its efficiency and compatibility with a wide range of devices, making it prevalent in television and audio equipment remote controls.\n\n
+        Each protocol provides a unique combination of data rate, modulation scheme, and frame structure, which helps standardize IR communication across compatible devices and ensures interoperability between them. These IR protocols have become integral to various applications, particularly in consumer electronics and point-to-point data transfer setups.</string>
+    <string name="tv_BluetoothIntro">
+        Bluetooth is a wireless technology standard designed for exchanging data between fixed and
+        mobile devices over short distances using UHF radio waves in the ISM bands, from 2.402 GHz to
+        2.480 GHz. Developed by Ericsson in 1994, Bluetooth was originally conceived as a
+        wireless alternative to RS-232 data cables. The name \"Bluetooth\" comes
+        from Harald Bluetooth, a 10th-century Danish king known for uniting Danish
+        tribes into a single kingdom. Similarly, Bluetooth technology was intended
+        to unite different communication protocols into one universal standard.</string>
+    <string name = "tv_BTIntroTitle"><b>Introduction to Bluetooth Technology</b></string>
+    <string name="tv_BTTimeline"><b>Version 1.0 and 1.0B (1999):</b> Initial commercial release with data transfer rates up to 721 kbps and a range of approximately 10 meters, but faced issues with interoperability and connection reliability.\n\n<b>Version 2.0 + EDR (2004):</b> Enhanced Data Rate (EDR) increased data speeds to 3 Mbps and reduced power consumption by 50%.\n\n<b>Version 4.0 + LE (2010):</b> Introduced Bluetooth Low Energy (BLE) for ultra-low power consumption and extended range up to 100 meters.\n\n<b>Version 5.0 (2016):</b> Doubled the speed (2 Mbps) and quadrupled the range (up to 400 meters), making it ideal for IoT applications.\n\n
+</string>
+
     <string-array name="philippines_provinces">
         <item>Abra</item>
         <item>Agusan del Norte</item>

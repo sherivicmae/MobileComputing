@@ -127,9 +127,8 @@ public class Login extends AppCompatActivity {
                                         Log.d("Login", "UserID retrieved: " + userId);
                                         resetFailedLogInAttempts();
 
-
                                         // Pass the userId to the MainActivity
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Intent intent = new Intent(getApplicationContext(), Home.class);
                                         intent.putExtra("userId", userId);  // Pass userId to the MainActivity
                                         startActivity(intent);
                                     }

@@ -5,33 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
     tools:context=".HelloWorld">
 
     <TextView
         android:id="@+id/helloText"
-        android:layout_width="286dp"
-        android:layout_height="77dp"
-        android:fontFamily="@font/league_spartan_extrabold"
-        android:text="@string/hello_world"
-        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee_regular"
+        android:text="Hello World!"
         android:textColor="@color/black"
-        android:textSize="48sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.374" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="264dp"
-        android:src="@drawable/globe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="251dp"
+        android:layout_height="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:srcCompat="@drawable/top_pic" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="251dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bottom_pic" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="187dp"
+        android:layout_height="149dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:srcCompat="@drawable/globe" />
+
+    <ImageView
+        android:id="@+id/imageRibbon"
+        android:layout_width="123dp"
+        android:layout_height="114dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556"
+        app:srcCompat="@drawable/ribbon" />
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_giga_semibold"
+        android:text="@string/myName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_R"
+    android:layout_width="390dp"
+    android:layout_height="850dp"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".InfraredStudy">
+
+        <TextView
+            android:id="@+id/lb_caseStudy"
+            android:layout_width="134dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Case Study"
+            android:textColor="@color/my_primary"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <TextView
+            android:id="@+id/lb_InfraredTitle"
+            android:layout_width="384dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/calcu_result_bg"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Infrared Communication"
+            android:textAlignment="center"
+            android:textColor="@color/white_calcu"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_caseStudy" />
+
+        <TextView
+            android:id="@+id/tv_InfraredIntro"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="@string/intro"
+            android:textAlignment="inherit"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_InfraredTitle" />
+
+        <TextView
+            android:id="@+id/lb_HowItWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="How Does It Works?"
+            android:textColor="@color/my_primary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_IRReceiver" />
+
+        <TextView
+            android:id="@+id/lb_IRFundamental"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Fundamentals of Infrared Communication"
+            android:textColor="@color/my_primary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_InfraredIntro" />
+
+        <TextView
+            android:id="@+id/tv_fundamentalIntro"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexend_light"
+            android:text="The basic components of an IR communication system include: "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_IRFundamental" />/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_IRtransmitter"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fundamentalIntro">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_transmitterInfo"
+                    android:layout_width="170dp"
+                    android:layout_height="71dp"
+                    android:fontFamily="@font/lexend_light"
+                    android:justificationMode="inter_word"
+                    android:text="@string/IRTransmitter"
+                    android:textAlignment="inherit"
+                    android:textSize="9sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.842" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_IRChannel"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fundamentalIntro">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_channelInfo"
+                    android:layout_width="165dp"
+                    android:layout_height="52dp"
+                    android:fontFamily="@font/lexend_light"
+                    android:justificationMode="inter_word"
+                    android:text="@string/IRChannel"
+                    android:textSize="9sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_IRReceiver"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_IRtransmitter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_receiverInfo"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_light"
+                    android:justificationMode="inter_word"
+                    android:text="@string/IRReceiver"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_IRModulation"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_IRChannel">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_modulationInfo"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_light"
+                    android:justificationMode="inter_word"
+                    android:text="@string/IRModulation"
+                    android:textSize="9sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_InfraredWorks"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="@string/IRWorks"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_HowItWorks" />
+
+        <TextView
+            android:id="@+id/lb_TypesofIR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Types of Infrared Communication"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_InfraredWorks" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_TypesofIR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="1. Point-to-Point Communication (Direct LOS)"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.902"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_TypesofIR">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="2. Diffuse Communication "
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType3"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="3. Quasi-Diffuse Communication "
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType4"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.902"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType2"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1455dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="4. Scattered Communication "
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType5"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="5. Wide-Angle Communication"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType6"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.902"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType4"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1455dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="6. Omnidirectional Communication "
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tv_IRType7"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType6">>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="7. Tracked Communication"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/lb_IRHardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Hardware Components in Infrared Communication "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRType7" />
+
+        <TextView
+            android:id="@+id/tv_IRHardwareIntro"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="Infrared communication systems rely on a range of specialized hardware components that work together to transmit and receive signals efficiently. These components are divided into transmitter and receiver parts, each playing a crucial role in the communication process. "
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_IRHardware" />
+
+        <TextView
+            android:id="@+id/tv_HardwareTransmitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Transmitter Components"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRHardwareIntro" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_TC1"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toStartOf="@+id/cv_TC2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareTransmitter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="1. IR LEDs"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_TC2"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareTransmitter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="2. Driver Circuits"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_TC3"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.579"
+            app:layout_constraintStart_toEndOf="@+id/cv_TC2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareTransmitter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="3. Modulators"
+                    android:textAlignment="center"
+                    android:textSize="9sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_TC4"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.305"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_TC1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="4. Power Supply"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_TC5"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.292"
+            app:layout_constraintStart_toEndOf="@+id/cv_TC4"
+            app:layout_constraintTop_toBottomOf="@+id/cv_TC3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="5.Encoding Circuits"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_HardwareReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Receiver Components"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_TC4" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_RC1"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toStartOf="@+id/cv_RC2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="1. Photodiodes/ Phototransistor"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_RC2"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="2. Amplifiers"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_RC3"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.579"
+            app:layout_constraintStart_toEndOf="@+id/cv_RC2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="3. Filters"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_RC4"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_RC1" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="4. Decoders"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_RC5"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/numbers_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.328"
+            app:layout_constraintStart_toEndOf="@+id/cv_RC4"
+            app:layout_constraintTop_toBottomOf="@+id/cv_RC3" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_giga_semibold"
+                    android:text="5. Processing Units"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/lv_IRAdvantagesandLimitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Advantages and Limitations of IR Communication "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_RC4" />
+
+        <TextView
+            android:id="@+id/tv_IRAdvantagesandLimitations"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="@string/IRAdvantagesandLimitation"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv_IRAdvantagesandLimitation"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/lv_IRApplications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Applications of Infrared Communication "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRAdvantagesandLimitations" />
+
+        <TextView
+            android:id="@+id/tv_IRApplications"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="@string/IRApplications"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv_IRApplications" />
+
+        <TextView
+            android:id="@+id/lv_IRProtocols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="IR Communication Protocols and Standards "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRApplications" />
+
+        <TextView
+            android:id="@+id/tv_IRProtocols"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:justificationMode="inter_word"
+            android:text="@string/IRProtocols"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv_IRProtocols" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+

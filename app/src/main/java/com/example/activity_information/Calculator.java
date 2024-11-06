@@ -1,11 +1,18 @@
 package com.example.activity_information;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,14 +23,20 @@ import org.mozilla.javascript.Scriptable;
 
 import com.google.android.material.button.MaterialButton;
 
+import java.util.ArrayList;
+
 public class Calculator extends AppCompatActivity implements View.OnClickListener{
 
 
     TextView resultTv, solutionTv;
-    MaterialButton buttonAC, buttonDel, buttonPercent, buttonDot;
+    MaterialButton buttonAC, buttonDel, buttonPercent, buttonDot,buttonHome,buttonOpen, buttonClose;
+    ImageView buttonHistory;
     MaterialButton buttonDivide, buttonMultiply, buttonSubtract, buttonAdd, buttonEquals;
     MaterialButton button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
 
+    ArrayList<String> calculationHistory = new ArrayList<>();
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +50,8 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
 
         resultTv = findViewById(R.id.result_tv);
         solutionTv = findViewById(R.id.solution_tv);
+        buttonHome = findViewById(R.id.button_Home);
+        buttonHistory = findViewById(R.id.button_history);
 
         assignId(buttonAC, R.id.button_ac);
         assignId(buttonDel, R.id.button_del);
@@ -57,6 +72,22 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
         assignId(button7, R.id.button_7);
         assignId(button8, R.id.button_8);
         assignId(button9, R.id.button_9);
+        assignId(buttonOpen, R.id.open_parenthesis);
+        assignId(buttonClose, R.id.close_parenthesis);
+
+
+        if (buttonHome != null) {
+            buttonHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("ButtonClick", "Home button clicked, starting HomeActivity");
+                    Intent intentBack = new Intent(getApplicationContext(), Home.class);
+                    intentBack.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intentBack);
+                    finish();
+                }
+            });
+        }
     }
 
     void assignId(MaterialButton btn, int id){
@@ -70,38 +101,37 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
         String buttonText = button.getText().toString();
         String dataToCalculate= solutionTv.getText().toString();
 
-            if(buttonText.equals("AC")){
+
+        if (buttonText.equals("AC")){
                 solutionTv.setText("");
                 resultTv.setText("0");
                 return;
-            }
+        }
 
         if (buttonText.equals("=")) {
-            // Evaluate the expression when equals is pressed
-            String expression = dataToCalculate.replace("x", "*"); // Replace 'x' with '*'
-            String finalResult = getResult(expression); // Evaluate the modified expression
-            solutionTv.setText(finalResult); // Display the result
-            resultTv.setText(finalResult); // Show the final result in resultTv
+            String expression = dataToCalculate.replace("x", "*");
+            String finalResult = getResult(expression);
+            String historyEntry = expression + " = " + finalResult;
+            solutionTv.setText(historyEntry);
+            resultTv.setText(finalResult);
+            calculationHistory.add(historyEntry);
             return;
         }
 
+
         if(buttonText.equals("Del")){
             if (dataToCalculate.length() > 1) {
-                // Remove the last character
                 dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
             } else {
-                // If the string is empty or has one character, set it to "0"
                 dataToCalculate = "0";
             }
         } else if (buttonText.equals("%")) {
-            // Calculate percentage
             if (!dataToCalculate.isEmpty()) {
                 double value = Double.parseDouble(dataToCalculate);
                 double percentage = value / 100; // Compute the percentage
                 dataToCalculate = String.valueOf(percentage);
             }
         } else {
-            // Prevent adding to "0" when the input starts with "0"
             if (dataToCalculate.equals("0")) {
                 dataToCalculate = buttonText;
             } else {
@@ -111,12 +141,22 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
 
         solutionTv.setText(dataToCalculate);
 
-        //String expression = dataToCalculate.replace("x", "*");
         String finalResult = getResult(dataToCalculate);
 
         if(!finalResult.equals("error")){
             resultTv.setText(finalResult);
         }
+
+
+        buttonHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show the history dialog
+                showHistoryDialog();
+            }
+        });
+
+
     }
 
     String getResult(String data){
@@ -134,5 +174,31 @@ public class Calculator extends AppCompatActivity implements View.OnClickListene
         }
 
     }
+
+    private void showHistoryDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Previous Calculations");
+
+        // Create a ListView to display the history
+        ListView historyListView = new ListView(this);
+
+        // Use an ArrayAdapter to display the history in the ListView
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, calculationHistory);
+        historyListView.setAdapter(adapter);
+
+        // Set the ListView as the content of the dialog
+        builder.setView(historyListView);
+        builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        // Show the dialog
+        builder.show();
+    }
+
+
 
 }

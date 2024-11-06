@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BluetoothTransfer">
+
+    <TextView
+        android:id="@+id/label_BT"
+        android:layout_width="361dp"
+        android:layout_height="47dp"
+        android:background="@drawable/calcu_result_bg"
+        android:text="@string/bluetooth"
+        android:textAlignment="center"
+        android:textColor="@color/white_calcu"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/btn_paired"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:text="Paired Devices"
+        android:textColor="@color/white_calcu"
+        android:textColorLink="@color/white_calcu"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/Lv_devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_BT"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/Lv_devices"
+        android:layout_width="350dp"
+        android:layout_height="307dp"
+        android:background="@drawable/frame_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_BT"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <Switch
+        android:id="@+id/switch_BT"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:text="@string/bluetooth"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_paired"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_BT"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <Button
+        android:id="@+id/btn_discover"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:text="Discover Devices"
+        android:textColor="@color/white_calcu"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/Lv_devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/btn_paired"
+        app:layout_constraintTop_toBottomOf="@+id/label_BT"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_sendFile"
+        android:layout_width="207dp"
+        android:layout_height="42dp"
+        android:text="Send File"
+        android:textColor="@color/white_calcu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/frame_img_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lv_devices"
+        app:layout_constraintVertical_bias="0.086">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardview_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_selectfile"
+                android:layout_width="250dp"
+                android:layout_height="24dp"
+                android:text="Selected File: None"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="186dp"
+                android:layout_height="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.815" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_receive"
+        android:layout_width="207dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="16dp"
+        android:text="Receive"
+        android:textColor="@color/white_calcu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_connectedDevice"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/darker_blue"
+        android:text="Disconneted"
+        android:textAlignment="center"
+        android:textColor="@color/white_calcu"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lv_devices" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

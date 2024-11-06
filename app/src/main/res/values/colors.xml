@@ -7,6 +7,8 @@
     <color name="my_secondary">#babde2</color>
     <color name="my_secondaryBlue">#8B8FC0</color>
     <color name="my_accent">#f3bd68</color>
+    <color name="frame_color">#ebebeb</color>
+    <color name="frame_img_color">#9DBFF0</color>
 
     //for calculator
     <color name="numbers_color">#d1e3ff</color>

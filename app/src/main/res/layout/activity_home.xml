@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".Home">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="147dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/logo_white"
+        android:src="@drawable/blue_icon"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <TextView
+        android:id="@+id/program_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/orbitron_variablefont_wght"
+        android:text="@string/program_name"
+        android:textColor="@color/my_primary"
+        android:textColorLink="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
+        tools:ignore="VisualLintOverlap" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.417"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:contentDescription="@string/user_profile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/user_profile"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.417"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:id="@+id/btn_hello"
+                android:contentDescription="@string/hello"
+                android:scaleType="fitCenter"
+                android:src="@drawable/globe"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/hello"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.633"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <ImageButton
+                android:id="@+id/btn_calculator"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:contentDescription="@string/calculator"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calculate"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/calculator"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.86"
+            tools:ignore="ExtraText">
+
+            <ImageButton
+                android:id="@+id/btn_signout"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:contentDescription="@string/signout"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logout"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/signout"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/league_spartan_bold"
+            android:shadowColor="@color/my_primary"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:text="@string/welcome_text"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:fontFamily="@font/league_spartan_extrabold"
+            app:layout_constraintBottom_toTopOf="@+id/frame2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.683"
+            tools:ignore="TextContrastCheck" />
+
+        <FrameLayout
+            android:id="@+id/frame5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.86"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <ImageButton
+                android:id="@+id/btn_bluetooth"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:contentDescription="@string/calculator"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bluetooth"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/bluetooth"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/frame_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.633"
+            tools:ignore="ExtraText,TextSizeCheck">
+
+            <ImageButton
+                android:id="@+id/btn_study"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/frame_img_color"
+                android:contentDescription="@string/calculator"
+                android:scaleType="fitCenter"
+                android:src="@drawable/study"
+                app:tint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/league_spartan_bold"
+                android:text="@string/study"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
