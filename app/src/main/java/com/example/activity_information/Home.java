@@ -100,7 +100,7 @@ public class Home extends AppCompatActivity {
 //                startActivity(intent);
 //                finish();
 
-                
+                startActivity(new Intent(Home.this, CountryFlagActivity.class));
             }
         });
     }
