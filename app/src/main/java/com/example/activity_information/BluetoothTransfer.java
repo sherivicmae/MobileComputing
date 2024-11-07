@@ -57,12 +57,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
 public class BluetoothTransfer extends AppCompatActivity {
 
-    private Button buttonShow, buttonDiscover, buttonSendFile, btn_receive, buttonSelectFile;
+    private Button buttonShow, buttonDiscover, buttonSendFile, btn_receive, btnBack;
     private TextView selectFileTv, selectDeviceTv, connectedDeviceTv;
     private BluetoothAdapter myBluetoothAdapter;
     private ListView listview;
@@ -82,19 +83,21 @@ public class BluetoothTransfer extends AppCompatActivity {
     private BroadcastReceiver discoveryReceiver;
     private BroadcastReceiver pairingReceiver;
 
+    private String listSelectMode = "PAIRED_SELECT";
+
     private ProgressBar progressBar4;
 
     private ActivityResultLauncher<String> requestPermissionLauncher;
 
     private static final String APP_NAME = "BTChat";
-    private static final UUID MY_UUID=UUID.fromString("8ce255c0-223a-11e0-ac64-0803450c9a66");
+    private static final UUID MY_UUID = UUID.fromString("8ce255c0-223a-11e0-ac64-0803450c9a66");
 
 
     static final int STATE_LISTENING = 1;
-    static final int STATE_CONNECTING=2;
-    static final int STATE_CONNECTED=3;
-    static final int STATE_CONNECTION_FAILED=4;
-    static final int STATE_MESSAGE_RECEIVED=5;
+    static final int STATE_CONNECTING = 2;
+    static final int STATE_CONNECTED = 3;
+    static final int STATE_CONNECTION_FAILED = 4;
+    static final int STATE_MESSAGE_RECEIVED = 5;
 
 
     private Uri selectedFileUri; // URI for the selected file to send
@@ -111,6 +114,7 @@ public class BluetoothTransfer extends AppCompatActivity {
         // Check for connected devices when activity starts
         getConnectedDeviceName();
     }
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -126,7 +130,6 @@ public class BluetoothTransfer extends AppCompatActivity {
             getConnectedDeviceName();
         }
     }
-
 
 
     private void applyWindowInsets() {
@@ -147,6 +150,7 @@ public class BluetoothTransfer extends AppCompatActivity {
         selectFileTv = findViewById(R.id.tv_selectfile);
         //selectDeviceTv = findViewById(R.id.tv_selectdevice);
         connectedDeviceTv = findViewById(R.id.tv_connectedDevice);
+        btnBack = findViewById(R.id.btn_back);
     }
 
     private void setupBluetoothAdapter() {
@@ -168,16 +172,17 @@ public class BluetoothTransfer extends AppCompatActivity {
 
     private void setupShowPairedDevicesButton() {
         buttonShow.setOnClickListener(view -> showPairedDevices());
+        listSelectMode = "PAIRED_SELECT";
     }
 
     private void setupDiscoverDevicesButton() {
         buttonDiscover.setOnClickListener(view -> discoverDevices());
+        listSelectMode = "DISCOVERED_SELECT";
     }
 
     private void setupSelectFileButton() {
         buttonSendFile.setOnClickListener(view -> openFilePicker());
     }
-
 
 
     private void showPairedDevices() {
@@ -262,6 +267,7 @@ public class BluetoothTransfer extends AppCompatActivity {
             }
         }
     };
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -273,8 +279,6 @@ public class BluetoothTransfer extends AppCompatActivity {
             }
         }
     }
-
-
 
 
     private boolean checkBluetoothPermission(String permission) {
@@ -356,17 +360,39 @@ public class BluetoothTransfer extends AppCompatActivity {
     }
 
     private void setUpListViewClickListener() {
+
+
         listview.setOnItemClickListener((parent, view, position, id) -> {
-            String deviceInfo = deviceList.get(position);
-            String deviceAddress = deviceInfo.split("\n")[1];
 
-            BluetoothDevice selectedDevice = discoveredDevicesMap.get(deviceAddress);
+            if(Objects.equals(listSelectMode, "PAIRED_SELECT")) {
+                String deviceInfo = deviceList.get(position);
+                String deviceAddress = deviceInfo.split("\n")[1];
 
-            // Create new client connection for each transfer
-            ClientClass clientClass = new ClientClass(selectedDevice);
-            clientClass.start();
+                BluetoothDevice selectedDevice = discoveredDevicesMap.get(deviceAddress);
 
-            connectedDeviceTv.setText("Status: Connecting");
+                // Create new client connection for each transfer
+                ClientClass clientClass = new ClientClass(selectedDevice);
+                clientClass.start();
+
+                connectedDeviceTv.setText("Status: Connecting");
+
+            }
+            else if(Objects.equals(listSelectMode, "DISCOVERED_SELECT")) {
+                String deviceInfo = deviceList.get(position);
+                String deviceAddress = deviceInfo.split("\n")[1]; // Extract device address'[-
+
+                // Get the BluetoothDevice object from the discovered devices map
+                BluetoothDevice device = discoveredDevicesMap.get(deviceAddress);
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                if (device != null && device.getBondState() != BluetoothDevice.BOND_BONDED) {
+                    device.createBond(); // Initiate pairing
+                    Toast.makeText(BluetoothTransfer.this, "Pairing with " + device.getName(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(BluetoothTransfer.this, "Device already paired or not found", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
     }
 
@@ -600,6 +626,16 @@ public class BluetoothTransfer extends AppCompatActivity {
         else {
             switchBT.setChecked(false);
         }
+
+        btnBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intentCalcu = new Intent(getApplicationContext(), Home.class);
+                intentCalcu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentCalcu);
+                finish();
+            }
+        });
 
     }
 

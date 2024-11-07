@@ -13,15 +13,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class InfraredStudy extends AppCompatActivity {
+public class StudyBTWireless extends AppCompatActivity {
 
     WebView webView;
-    Button backStudyHome1;
+    Button backStudyHome3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_infrared_study);
+        setContentView(R.layout.activity_study_btwireless);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -29,14 +30,14 @@ public class InfraredStudy extends AppCompatActivity {
         });
 
         webView = findViewById(R.id.webView_IRStudy);
-        String btWireless_video = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/hD9jT24oE40?si=To61rVqo5vS7CAIl\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+        String btWireless_video = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/1I1vxu5qIUM?si=zSc6U8Uu2FPGW83S\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
         webView.loadData(btWireless_video, "text/html", "utf-8");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
 
-        backStudyHome1 = findViewById(R.id.btn_backStudyHome1);
+        backStudyHome3 = findViewById(R.id.btn_backStudyHome3);
 
-        backStudyHome1.setOnClickListener(new View.OnClickListener(){
+        backStudyHome3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intentCalcu = new Intent(getApplicationContext(), StudyHome.class);
@@ -45,7 +46,6 @@ public class InfraredStudy extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
+
 }

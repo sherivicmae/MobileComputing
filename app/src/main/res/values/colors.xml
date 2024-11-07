@@ -10,6 +10,8 @@
     <color name="frame_color">#ebebeb</color>
     <color name="frame_img_color">#9DBFF0</color>
 
+    <color name="transparent">#00000000</color>
+
     //for calculator
     <color name="numbers_color">#d1e3ff</color>
     <color name="arithmetic_operations">#6f96d1</color>

@@ -25,6 +25,12 @@
         android:theme="@style/Theme.Activity_Information"
         tools:targetApi="31">
         <activity
+            android:name=".CountryFlagActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudyBTWireless"
+            android:exported="false" />
+        <activity
             android:name=".StudyBtTransfer"
             android:exported="false" />
         <activity

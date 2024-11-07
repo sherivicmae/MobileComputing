@@ -9,33 +9,34 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 
-     <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".InfraredStudy">
+        android:layout_height="match_parent"
+        tools:context=".InfraredStudy"
+        tools:ignore="ExtraText">
 
         <TextView
             android:id="@+id/lb_caseStudy"
             android:layout_width="134dp"
             android:layout_height="31dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Case Study"
             android:textColor="@color/my_primary"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.076"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toEndOf="@+id/btn_backStudyHome1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.001" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/lb_InfraredTitle"
             android:layout_width="384dp"
             android:layout_height="46dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/calcu_result_bg"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Infrared Communication"
@@ -242,6 +243,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Types of Infrared Communication"
+            android:textColor="@color/my_primary"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -495,6 +497,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Hardware Components in Infrared Communication "
+            android:textColor="@color/my_primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -520,6 +523,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Transmitter Components"
+            android:textColor="@color/my_primary"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -705,7 +709,7 @@
             app:cardBackgroundColor="@color/numbers_color"
             app:layout_constraintEnd_toStartOf="@+id/cv_RC2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -737,7 +741,7 @@
             app:cardBackgroundColor="@color/numbers_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -771,7 +775,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.579"
             app:layout_constraintStart_toEndOf="@+id/cv_RC2"
-            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver" >
+            app:layout_constraintTop_toBottomOf="@+id/tv_HardwareReceiver">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -801,7 +805,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.283"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_RC1" >
+            app:layout_constraintTop_toBottomOf="@+id/cv_RC1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -834,7 +838,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.328"
             app:layout_constraintStart_toEndOf="@+id/cv_RC4"
-            app:layout_constraintTop_toBottomOf="@+id/cv_RC3" >
+            app:layout_constraintTop_toBottomOf="@+id/cv_RC3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -862,6 +866,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Advantages and Limitations of IR Communication "
+            android:textColor="@color/my_primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -888,6 +893,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="Applications of Infrared Communication "
+            android:textColor="@color/my_primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -913,6 +919,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/league_spartan_bold"
             android:text="IR Communication Protocols and Standards "
+            android:textColor="@color/my_primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -931,6 +938,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lv_IRProtocols" />
 
+        <Button
+            android:id="@+id/btn_backStudyHome1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Button"
+            app:icon="@drawable/home_calcu"
+            app:iconGravity="top"
+            app:iconSize="30dp"
+            app:iconTint="@color/white_calcu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lb_IRLearnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/league_spartan_bold"
+            android:text="Learn More"
+            android:textColor="@color/my_primary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_IRProtocols" />
+
+        <WebView
+            android:id="@+id/webView_IRStudy"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_IRLearnMore" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

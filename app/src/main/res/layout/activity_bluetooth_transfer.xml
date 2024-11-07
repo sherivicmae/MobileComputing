@@ -80,7 +80,8 @@
     <Button
         android:id="@+id/btn_sendFile"
         android:layout_width="207dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
         android:text="Send File"
         android:textColor="@color/white_calcu"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,13 +137,14 @@
     <Button
         android:id="@+id/btn_receive"
         android:layout_width="207dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:text="Receive"
         android:textColor="@color/white_calcu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sendFile" />
 
     <TextView
         android:id="@+id/tv_connectedDevice"
@@ -158,5 +160,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Lv_devices" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/frame_img_color"
+        android:text="Button"
+        app:icon="@drawable/home_calcu"
+        app:iconGravity="top"
+        app:iconSize="40dp"
+        app:iconTint="@color/white_calcu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
